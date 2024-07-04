@@ -1,0 +1,54 @@
+Step-by-Step Process to Execute the Project
+
+1. Download and Extract the Project
+Download the weather-monitoring-system.zip file.
+Extract the contents to a directory on your local machine.
+
+2. Set Up the Virtual Environment
+Open a terminal or command prompt and navigate to the project directory:
+
+python -m venv venv
+
+Activate the virtual environment:
+
+venv\Scripts\activate
+
+3. Install the Dependencies
+Install the required Python packages using requirements.txt:
+
+pip install -r requirements.txt
+
+4. Set Up the MySQL Database
+Open your MySQL client (e.g., MySQL Workbench or MySQL command line).
+
+Execute the create_database.sql script to create the database and table:
+
+Using MySQL command line:
+
+mysql -u root -p < create_database.sql
+
+Using MySQL Workbench:
+Open a new SQL tab.
+Copy and paste the contents of create_database.sql.
+Execute the script.
+
+5. Fetching Weather Data
+Open a new terminal or command prompt.
+
+Navigate to the project directory and activate the virtual environment (if not already activated):
+
+venv\Scripts\activate   # On Windows
+
+Run the weather data fetch script:
+python fetch_weather.py
+
+6. Running the Flask Application
+Ensure the virtual environment is activated.
+
+Run the Flask application:
+
+python app.py
+
+Open a web browser and navigate to: http://127.0.0.1:5000
+
+You should see the weather monitoring application. You can input a city name to get real-time weather updates.
